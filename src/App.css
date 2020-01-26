@@ -1,0 +1,153 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.small_table, .small_table th, .small_table td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.small_table th{
+  text-align: left;
+}
+.small_table th, .small_table td {
+  padding: 8px;
+}
+.half_layout{
+  width: 80%;
+  padding: 10px 0 0 20px;
+}
+.width30{
+  width: 30% !important;
+}
+.width70{
+  width: 70% !important;
+}
+
+/*responsive table*/
+.full_responsive { 
+width: 100%;
+
+border-collapse: collapse; 
+}
+
+/* Zebra striping */
+.full_responsive tr:nth-of-type(odd) { 
+background: #eee; 
+}
+
+.full_responsive th { 
+background: #3498db; 
+color: white; 
+font-weight: bold; 
+}
+
+.full_responsive th { 
+padding: 10px; 
+border: 1px solid #ccc; 
+text-align: left; 
+font-size: 18px;
+
+}
+
+.full_responsive td {
+  padding: 10px; 
+border: 1px solid #ccc; 
+text-align: left; 
+font-size: 18px;
+word-break: break-all;
+}
+
+.transcation {
+  padding: 10px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+.full_responsive { 
+  width: 100%; 
+}
+
+/* Force table to not be like tables anymore */
+.full_responsive, .full_responsive thead, .full_responsive tbody, .full_responsive th, .full_responsive td, .full_responsive tr { 
+display: block; 
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+.full_responsive thead tr { 
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+
+.full_responsive tr { border: 1px solid #ccc; }
+
+.full_responsive td { 
+/* Behave  like a "row" */
+border: none;
+border-bottom: 1px solid #eee; 
+position: relative;
+padding-left: 50%; 
+word-wrap: break-word;
+}
+
+.full_responsive td:before { 
+/* Now like a table header */
+position: absolute;
+/* Top/left values mimic padding */
+top: 6px;
+left: 6px;
+width: 45%; 
+padding-right: 10px; 
+white-space: nowrap;
+/* Label the data */
+content: attr(data-column);
+
+color: #000;
+font-weight: bold;
+}
+
+}
+.new_header{
+background: #3498db;
+padding: 15px;
+margin-bottom: 15px;
+}
+.new_header h1{
+color: #fff;
+margin: 10px 0px;
+text-align: center;
+}
+
+tranctions_container {
+  padding: 10px !important;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
